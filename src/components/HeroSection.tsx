@@ -128,7 +128,7 @@ const HeroSection = () => {
               className={`text-base text-muted-foreground leading-relaxed mb-7 transition-all duration-700 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
               Expert bridal makeup, hair styling & skincare by{" "}
-              <strong className="text-foreground">Jamuna</strong> — 15+ years
+              <strong className="text-foreground">Jamuna</strong> — 5+ years
               making every client feel beautiful and confident.
             </p>
 

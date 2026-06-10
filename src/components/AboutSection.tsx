@@ -47,7 +47,7 @@ const AboutSection = () => {
               Lead Beautician & Founder
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With over 15 years of experience in the beauty industry, Jamuna
+              With over 5 years of experience in the beauty industry, Jamuna
               has transformed thousands of brides and clients into their most
               beautiful selves. Her expertise spans bridal makeup, hair styling,
               skincare treatments, and mehndi artistry. She believes every woman
