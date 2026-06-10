@@ -1,10 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  MessageCircle,
-  Mail,
-  Phone,
-  ArrowRight,
-} from "lucide-react";
+import { MessageCircle, Mail, Phone, ArrowRight } from "lucide-react";
 import logo from "@/assets/sris-logo-only.png";
 import srisNameMark from "@/assets/sris-name-mark.png";
 import heroBeautyIllustration from "@/assets/hero-beauty-illustration.png";
