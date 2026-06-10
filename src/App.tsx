@@ -1,11 +1,15 @@
-import Header from "@/components/Header.tsx";
-import HeroSection from "@/components/HeroSection";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <>
-      <Header></Header>
-      <HeroSection></HeroSection>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
