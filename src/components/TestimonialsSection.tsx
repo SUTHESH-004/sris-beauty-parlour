@@ -6,39 +6,39 @@ import testimonialFriendliness from "@/assets/testimonial-friendliness.png";
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
+    name: "Gayathri S",
     rating: 5,
-    review: "Absolutely stunning bridal makeup! Jamuna made me look like a princess on my wedding day. Everyone couldn't stop complimenting my look.",
+    review: "The staff are friendly and experienced. I regularly visit for threading and hair spa services. Their attention to hygiene and customer satisfaction is impressive.",
   },
   {
     id: 2,
-    name: "Anitha Krishnan",
+    name: "Divya M",
     rating: 5,
-    review: "Best beauty parlour in town! The hair styling was perfect and lasted all day long. Highly recommend for any special occasion.",
+    review: "I had a hair coloring session here and loved the outcome. The shade was exactly as discussed, and my hair remained soft and healthy.",
   },
   {
     id: 3,
-    name: "Meera Patel",
+    name: "Karthika S",
     rating: 5,
-    review: "The mehndi design was intricate and beautiful. Sri's Beauty Parlour really understands what brides need. Thank you so much!",
+    review: "Jamuna akka bridal makeup pannadhu semma. Makeup over ah illaama natural look kuduthanga. Wedding photos la romba azhaga vandhirundhen.",
   },
   {
     id: 4,
-    name: "Kavitha Rajan",
+    name: "Anupriya M",
     rating: 5,
-    review: "Professional service with amazing attention to detail. The facial treatment left my skin glowing. Will definitely come back!",
+    review: "Mehndi design romba detailed ah potanga. Color um nalla dark ah vandhuchu. Function la ellarum design pathi ketanga.",
   },
   {
     id: 5,
-    name: "Deepa Venkat",
+    name: "Shalini V",
     rating: 5,
-    review: "Wonderful experience! The team is so friendly and skilled. My party makeup was exactly what I envisioned.",
+    review: "Parlour clean ah irukku, service quality um nalla irukku. Prices um reasonable. Regular ah visit panna nalla place.",
   },
   {
     id: 6,
-    name: "Lakshmi Suresh",
+    name: "Keerthana S",
     rating: 5,
-    review: "I've tried many beauty parlours but Sri's is the best. The nail art designs are creative and long-lasting. Love it!",
+    review: "Sri's Parlour offers a great combination of professionalism and personal care. Every visit has been a pleasant experience, and I always leave satisfied.",
   },
 ];
 
