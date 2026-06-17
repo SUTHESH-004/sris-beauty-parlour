@@ -14,41 +14,49 @@ const services = [
   {
     image: bridalmakeupportfolio,
     title: "Bridal Makeup",
+    alt: "Bridal makeup transformation at Sri's Beauty Parlour, Kinathukadavu",
     description: "Complete bridal transformation with premium products.",
   },
   {
     image: portfolio2,
     title: "Hair Styling",
+    alt: "Professional hair styling for weddings and events at Sri's Beauty Parlour",
     description: "From elegant updos to trendy cuts for every occasion.",
   },
   {
     image: portfolio3,
     title: "Skincare & Facials",
+    alt: "Skincare and facial treatment for glowing skin at Sri's Beauty Parlour",
     description: "Rejuvenating treatments for glowing, healthy skin.",
   },
   {
     image: mehendiartportfolio,
     title: "Mehndi Art",
+    alt: "Intricate bridal mehndi henna art design at Sri's Beauty Parlour Kinathukadavu",
     description: "Intricate and beautiful henna designs for all celebrations.",
   },
   {
     image: portfolio5,
-    title: " Manicure and Pedicure ",
+    title: "Manicure and Pedicure",
+    alt: "Manicure and pedicure nail care services at Sri's Beauty Parlour",
     description: "Stunning nail designs and premium manicure services.",
   },
   {
     image: portfolio6,
     title: "Eyebrow Shaping",
+    alt: "Eyebrow threading and shaping at Sri's Beauty Parlour Kinathukadavu",
     description: "Perfect eyebrow threading and shaping for defined looks.",
   },
   {
     image: receptionMakeupPortfolio,
     title: "Reception Makeup",
+    alt: "Glamorous reception makeup for special occasions at Sri's Beauty Parlour",
     description: "Glamorous looks for special occasions and events.",
   },
   {
     image: portfolio8,
     title: "HairCare & Lice Treatment",
+    alt: "Hair care and lice treatment services at Sri's Beauty Parlour Tamil Nadu",
     description: "Maintain long and healthy hair",
   },
 ];
@@ -72,15 +80,15 @@ const ServiceCard = ({
         href="https://www.instagram.com/sris_parlour?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         target="_blank"
         rel="noopener noreferrer"
-        className="block relative overflow-hidden rounded-lg aspect-[3/4] mb-4 shadow-lg hover:shadow-xl transition-shadow"
+        className="block relative overflow-hidden rounded-lg aspect-3/4 mb-4 shadow-lg hover:shadow-xl transition-shadow"
       >
         <img
           src={service.image}
-          alt={service.title}
+          alt={service.alt}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         {/* Gradient overlay always visible */}
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-foreground/60 via-transparent to-transparent" />
 
         {/* Floating Instagram Overlay */}
         <div className="absolute inset-0 bg-foreground/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center backdrop-blur-[2px]">
