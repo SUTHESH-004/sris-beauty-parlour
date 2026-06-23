@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { MessageCircle, ArrowRight, Heart, Users, Calendar, Sparkles } from "lucide-react";
+import {
+  MessageCircle,
+  ArrowRight,
+  Heart,
+  Users,
+  Calendar,
+  Sparkles,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   bridalMakeup,
@@ -12,8 +19,14 @@ import {
 } from "@/assets/assets";
 
 const leftImages = [
-  { src: babyShower, alt: "Baby shower celebration styling at Sri's Beauty Parlour" },
-  { src: marriageImage, alt: "Marriage makeup and styling at Sri's Beauty Parlour" },
+  {
+    src: babyShower,
+    alt: "Baby shower celebration styling at Sri's Beauty Parlour",
+  },
+  {
+    src: marriageImage,
+    alt: "Marriage makeup and styling at Sri's Beauty Parlour",
+  },
 ];
 import { useScrollAnimation, useCountUp } from "@/hooks/useScrollAnimation";
 
@@ -25,7 +38,13 @@ const stats = [
   { icon: Heart, value: 100, suffix: "%", label: "Satisfaction" },
 ];
 
-const StatItem = ({ stat, isVisible }: { stat: (typeof stats)[0]; isVisible: boolean }) => {
+const StatItem = ({
+  stat,
+  isVisible,
+}: {
+  stat: (typeof stats)[0];
+  isVisible: boolean;
+}) => {
   const { count, trigger } = useCountUp(stat.value);
   const Icon = stat.icon;
 
@@ -38,7 +57,8 @@ const StatItem = ({ stat, isVisible }: { stat: (typeof stats)[0]; isVisible: boo
       <div className="flex items-center justify-center gap-2 mb-1">
         <Icon className="w-4 h-4 text-primary" />
         <span className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-          {count}{stat.suffix}
+          {count}
+          {stat.suffix}
         </span>
       </div>
       <p className="text-muted-foreground text-xs">{stat.label}</p>
@@ -47,14 +67,26 @@ const StatItem = ({ stat, isVisible }: { stat: (typeof stats)[0]; isVisible: boo
 };
 
 const rightTopImages = [
-  { src: bridalPortfolio, alt: "Stunning bridal makeup at Sri's Beauty Parlour" },
-  { src: bridalPortfolio2, alt: "Beautiful bridal transformation at Sri's Beauty Parlour" },
+  {
+    src: bridalPortfolio,
+    alt: "Stunning bridal makeup at Sri's Beauty Parlour",
+  },
+  {
+    src: bridalPortfolio2,
+    alt: "Beautiful bridal transformation at Sri's Beauty Parlour",
+  },
   { src: bridalMakeup, alt: "Bridal makeup artistry at Sri's Beauty Parlour" },
 ];
 
 const rightBottomImages = [
-  { src: receptionPortfolio1, alt: "Glamorous reception makeup at Sri's Beauty Parlour" },
-  { src: receptionPortfolio2, alt: "Reception event styling at Sri's Beauty Parlour" },
+  {
+    src: receptionPortfolio1,
+    alt: "Glamorous reception makeup at Sri's Beauty Parlour",
+  },
+  {
+    src: receptionPortfolio2,
+    alt: "Reception event styling at Sri's Beauty Parlour",
+  },
 ];
 
 const CyclingImage = ({
@@ -87,12 +119,14 @@ const CyclingImage = ({
   }, [current, interval, images.length]);
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl shadow-xl ${aspectClass}`}>
+    <div
+      className={`relative overflow-hidden rounded-2xl shadow-xl ${aspectClass}`}
+    >
       <img
         key={`current-${current}`}
         src={images[current].src}
         alt={images[current].alt}
-        className="absolute inset-0 w-full h-full object-cover animate-kenburns"
+        className="absolute inset-0 w-full h-full object-cover object-center animate-kenburns"
         loading="lazy"
       />
 
@@ -102,7 +136,7 @@ const CyclingImage = ({
           src={images[next].src}
           alt={images[next].alt}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1200 ease-in-out ${transitioning ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1200 ease-in-out ${transitioning ? "opacity-100" : "opacity-0"}`}
         />
       )}
 
@@ -162,34 +196,29 @@ const PreciousMoments = () => {
             <div className="absolute -top-4 right-8 z-10">
               <div className="inline-flex items-center gap-2 border border-primary/20 bg-card text-primary px-4 py-2 rounded-full shadow-sm">
                 <Heart className="w-4 h-4 fill-primary" />
-                <span className="font-semibold text-sm">Trusted by 1000+ Clients</span>
+                <span className="font-semibold text-sm">
+                  Trusted by 1000+ Clients
+                </span>
               </div>
             </div>
 
-            {/* Labels row */}
-            <div className="grid md:grid-cols-12 gap-6 mb-3">
-              <p className="md:col-span-7 text-sm font-medium text-muted-foreground tracking-wide uppercase">
-                Celebrations
-              </p>
-              <p className="hidden md:block md:col-span-5 text-sm font-medium text-muted-foreground tracking-wide uppercase">
-                Bridal
-              </p>
-            </div>
-
             {/* Images + CTA */}
-            <div className="grid md:grid-cols-12 gap-6 items-end">
-              {/* Left — Baby shower + Book */}
+            <div className="grid md:grid-cols-12 gap-5">
+              {/* Left — Celebrations */}
               <div className="md:col-span-7 flex flex-col">
-                <div className="relative group">
+                <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-5">
+                  Celebrations
+                </p>
+                <div className="relative group flex-1">
                   <div className="absolute -inset-3 bg-primary/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <CyclingImage
                     images={leftImages}
                     interval={10000}
-                    aspectClass="aspect-4/3 md:aspect-5/4 shadow-2xl"
+                    aspectClass="h-full min-h-[350px] md:min-h-0 shadow-2xl"
                   />
                 </div>
 
-                <div className="mt-6 flex justify-center">
+                <div className="mt-5 flex justify-center">
                   <Button
                     size="lg"
                     className="w-full max-w-md gap-3 group hover:scale-[1.02] transition-all shadow-lg rounded-xl px-10 py-6 text-base"
@@ -209,18 +238,23 @@ const PreciousMoments = () => {
               </div>
 
               {/* Right column */}
-              <div className="md:col-span-5 flex flex-col gap-4">
+              <div className="md:col-span-5 flex flex-col gap-5">
                 {/* Bridal */}
-                <div className="relative group">
-                  <CyclingImage
-                    images={rightTopImages}
-                    interval={3500}
-                    aspectClass="aspect-4/3"
-                  />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="text-primary-foreground font-serif font-bold">
-                      Wedding Glam
-                    </span>
+                <div>
+                  <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-5">
+                    Bridal
+                  </p>
+                  <div className="relative group">
+                    <CyclingImage
+                      images={rightTopImages}
+                      interval={3500}
+                      aspectClass="aspect-4/3"
+                    />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="text-primary-foreground font-serif font-bold">
+                        Wedding Glam
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -233,7 +267,7 @@ const PreciousMoments = () => {
                     <CyclingImage
                       images={rightBottomImages}
                       interval={4500}
-                      aspectClass="aspect-video"
+                      aspectClass="aspect-4/3"
                     />
                     <div className="absolute bottom-4 left-4">
                       <span className="text-primary-foreground font-serif font-bold">
