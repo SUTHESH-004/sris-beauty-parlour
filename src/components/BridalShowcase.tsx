@@ -18,7 +18,7 @@ const occasions = [
     title: "Bridal Makeup",
     description:
       "Look like royalty on your wedding day with our signature bridal artistry — from traditional to modern looks.",
-    highlight: "500+ Happy Brides",
+    highlight: "100+ Happy Brides",
   },
   {
     icon: Gem,

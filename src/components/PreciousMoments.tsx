@@ -18,9 +18,10 @@ const leftImages = [
 import { useScrollAnimation, useCountUp } from "@/hooks/useScrollAnimation";
 
 const stats = [
-  { icon: Users, value: 500, suffix: "+", label: "Happy Clients" },
+  { icon: Users, value: 1000, suffix: "+", label: "Happy Clients" },
   { icon: Calendar, value: 5, suffix: "+", label: "Years Experience" },
   { icon: Sparkles, value: 100, suffix: "+", label: "Bridal Makeovers" },
+
   { icon: Heart, value: 100, suffix: "%", label: "Satisfaction" },
 ];
 
