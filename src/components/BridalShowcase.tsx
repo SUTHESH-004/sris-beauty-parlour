@@ -9,7 +9,7 @@ import {
   Camera,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { bridalMakeup, bridalPortfolio, receptionPortfolio } from "@/assets/assets";
+import { bridalMakeup, bridalPortfolio, receptionPortfolio1 as receptionPortfolio } from "@/assets/assets";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const occasions = [
@@ -93,6 +93,7 @@ const BridalShowcase = () => {
                 <img
                   src={bridalMakeup}
                   alt="Beautiful bridal transformation at Sri's Beauty Parlour"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-foreground/50 via-transparent to-transparent" />
@@ -115,6 +116,7 @@ const BridalShowcase = () => {
                 <img
                   src={bridalPortfolio}
                   alt="Stunning makeup for special occasions"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent" />
@@ -128,6 +130,7 @@ const BridalShowcase = () => {
                 <img
                   src={receptionPortfolio}
                   alt="Glamorous reception and event makeup"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent" />
