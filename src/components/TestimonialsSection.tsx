@@ -93,7 +93,7 @@ const TestimonialsSection = () => {
   const { ref: spotlightRef, isVisible: spotlightVisible } = useScrollAnimation(0.15);
 
   return (
-    <section id="testimonials" className="py-32 bg-card relative overflow-hidden">
+    <section id="testimonials" className="py-20 bg-card relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6 relative">
         <div 
           ref={headerRef}
-          className={`text-center mb-20 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`text-center mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <p className="text-primary font-medium mb-4 tracking-widest uppercase">
             Testimonials
@@ -123,6 +123,7 @@ const TestimonialsSection = () => {
               <img
                 src={testimonialFriendliness}
                 alt="Happy client sharing a warm moment after bridal styling"
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-foreground/65 via-transparent to-primary/10" />

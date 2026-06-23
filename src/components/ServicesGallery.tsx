@@ -1,13 +1,13 @@
 import { Play, Sparkles } from "lucide-react";
 import {
-  portfolio2,
-  portfolio3,
-  portfolio5,
-  portfolio6,
-  portfolio8,
+  hairstylePortfolio,
   bridalMakeup as bridalmakeupportfolio,
   mehndiPortfolio as mehendiartportfolio,
-  receptionPortfolio as receptionMakeupPortfolio,
+  eyebrowPortfolio,
+  facialPortfolio,
+  licetreatmentPortfolio,
+  pedicurePortfolio,
+  receptionPortfolio1 as receptionMakeupPortfolio,
 } from "@/assets/assets";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -19,13 +19,14 @@ const services = [
     description: "Complete bridal transformation with premium products.",
   },
   {
-    image: portfolio2,
+    image: hairstylePortfolio,
     title: "Hair Styling",
     alt: "Professional hair styling for weddings and events at Sri's Beauty Parlour",
     description: "From elegant updos to trendy cuts for every occasion.",
+    objectPosition: "top",
   },
   {
-    image: portfolio3,
+    image: facialPortfolio,
     title: "Skincare & Facials",
     alt: "Skincare and facial treatment for glowing skin at Sri's Beauty Parlour",
     description: "Rejuvenating treatments for glowing, healthy skin.",
@@ -37,13 +38,13 @@ const services = [
     description: "Intricate and beautiful henna designs for all celebrations.",
   },
   {
-    image: portfolio5,
+    image: pedicurePortfolio,
     title: "Manicure and Pedicure",
     alt: "Manicure and pedicure nail care services at Sri's Beauty Parlour",
     description: "Stunning nail designs and premium manicure services.",
   },
   {
-    image: portfolio6,
+    image: eyebrowPortfolio,
     title: "Eyebrow Shaping",
     alt: "Eyebrow threading and shaping at Sri's Beauty Parlour Kinathukadavu",
     description: "Perfect eyebrow threading and shaping for defined looks.",
@@ -55,7 +56,7 @@ const services = [
     description: "Glamorous looks for special occasions and events.",
   },
   {
-    image: portfolio8,
+    image: licetreatmentPortfolio,
     title: "HairCare & Lice Treatment",
     alt: "Hair care and lice treatment services at Sri's Beauty Parlour Tamil Nadu",
     description: "Maintain long and healthy hair",
@@ -86,7 +87,8 @@ const ServiceCard = ({
         <img
           src={service.image}
           alt={service.alt}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
+          className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${service.objectPosition === "top" ? "object-top" : ""}`}
         />
         {/* Gradient overlay always visible */}
         <div className="absolute inset-0 bg-linear-to-t from-foreground/60 via-transparent to-transparent" />
@@ -130,7 +132,7 @@ const ServicesGallery = () => {
   return (
     <section
       id="services"
-      className="py-32 bg-background relative overflow-hidden"
+      className="py-20 bg-background relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute top-40 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -139,7 +141,7 @@ const ServicesGallery = () => {
       <div className="container mx-auto px-6 relative">
         <div
           ref={headerRef}
-          className={`text-center mb-20 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`text-center mb-12 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <p className="text-primary font-medium mb-4 tracking-widest uppercase flex items-center justify-center gap-2">
             <Sparkles className="w-4 h-4" />

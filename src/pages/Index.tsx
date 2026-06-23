@@ -1,9 +1,8 @@
 import Header from "@/components/Header.tsx";
 import HeroSection from "@/components/HeroSection";
 import MapSection from "@/components/MapSection";
-import BridalShowcase from "@/components/BridalShowcase";
+import PreciousMoments from "@/components/PreciousMoments";
 import ServicesGallery from "@/components/ServicesGallery";
-import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
@@ -13,8 +12,8 @@ const Index = () => {
     <div className="min-h-screen relative">
       <Header></Header>
       <HeroSection></HeroSection>
-      <BridalShowcase></BridalShowcase>
-      <StatsSection></StatsSection>
+      <PreciousMoments />
+
       <ServicesGallery></ServicesGallery>
       <TestimonialsSection></TestimonialsSection>
       <AboutSection></AboutSection>

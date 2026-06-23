@@ -13,7 +13,7 @@ const MapSection = () => {
   };
 
   return (
-    <section id="location" className="py-32 bg-background">
+    <section id="location" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-primary font-medium mb-4 tracking-widest uppercase">

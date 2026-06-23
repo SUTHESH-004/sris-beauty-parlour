@@ -7,15 +7,14 @@ const AboutSection = () => {
   const { ref: quoteRef, isVisible: quoteVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-32 bg-card relative overflow-hidden">
-      {/* Decorative background */}
+    <section id="about" className="py-24 bg-card relative overflow-hidden">
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
         <div
           ref={headerRef}
-          className={`text-center mb-20 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`text-center mb-16 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <p className="text-primary font-medium mb-4 tracking-widest uppercase">
             Meet the Team
@@ -27,73 +26,71 @@ const AboutSection = () => {
 
         <div
           ref={teamRef}
-          className={`grid md:grid-cols-2 gap-16 items-center max-w-5xl mx-auto transition-all duration-700 delay-150 ${teamVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`grid md:grid-cols-2 gap-10 max-w-5xl mx-auto transition-all duration-700 delay-150 ${teamVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           {/* Jamuna */}
-          <div className="text-center md:text-left group">
-            <div className="w-48 h-48 mx-auto md:mx-0 rounded-full bg-primary/20 border-4 border-primary/30 mb-8 flex items-center justify-center overflow-hidden group-hover:scale-105 group-hover:border-primary/60 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary/20">
-              <img
-                src={jamunaPortrait}
-                alt="Jamuna, lead beautician and founder"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              {/* <span className="font-serif text-6xl text-primary group-hover:scale-110 transition-transform duration-300">J</span> */}
+          <div className="group rounded-3xl border border-primary/15 bg-linear-to-b from-primary/5 to-transparent p-8 md:p-10 text-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30">
+            <div className="relative w-44 h-44 mx-auto mb-6">
+              <div className="absolute -inset-3 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-500" />
+              <div className="relative w-full h-full rounded-full overflow-hidden border-[3px] border-primary shadow-lg shadow-primary/15 group-hover:scale-105 transition-transform duration-500">
+                <img
+                  src={jamunaPortrait}
+                  alt="Jamuna, lead beautician and founder"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <h3 className="font-serif text-3xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+            <span className="inline-block text-[10px] font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full mb-3 tracking-widest uppercase">
+              Founder & Lead Beautician
+            </span>
+            <h3 className="font-serif text-3xl font-bold text-foreground mb-2">
               Jamuna
             </h3>
-            <p className="text-primary font-medium mb-4">
-              Lead Beautician & Founder
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              With over 5 years of experience in the beauty industry, Jamuna
-              has transformed thousands of brides and clients into their most
-              beautiful selves. Her expertise spans bridal makeup, hair styling,
-              skincare treatments, and mehndi artistry. She believes every woman
+            <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+              With over 5 years of experience, Jamuna has transformed thousands
+              of brides and clients. Her expertise spans bridal makeup, hair
+              styling, skincare, and mehndi artistry — she believes every woman
               deserves to feel beautiful.
             </p>
           </div>
 
-          {/* Husband */}
-          <div className="text-center md:text-left group">
-            <div className="w-48 h-48 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-secondary/30 mb-8 group-hover:scale-105 group-hover:border-secondary/60 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-secondary/20">
-              <img
-                src={vigneshPortrait}
-                alt="Managing Partner"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
+          {/* Vignesh */}
+          <div className="group rounded-3xl border border-border bg-linear-to-b from-muted/30 to-transparent p-8 md:p-10 text-center transition-all duration-500 hover:shadow-xl hover:shadow-foreground/5 hover:border-border">
+            <div className="relative w-44 h-44 mx-auto mb-6">
+              <div className="relative w-full h-full rounded-full overflow-hidden border-[3px] border-foreground/15 shadow-lg shadow-foreground/5 group-hover:scale-105 transition-transform duration-500">
+                <img
+                  src={vigneshPortrait}
+                  alt="Vignesh Alaguvel, Managing Partner"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <h3 className="font-serif text-3xl font-bold text-foreground mb-4 group-hover:text-secondary transition-colors">
+            <span className="inline-block text-[10px] font-semibold text-muted-foreground bg-muted/50 px-3 py-1 rounded-full mb-3 tracking-widest uppercase">
+              Co-Founder
+            </span>
+            <h3 className="font-serif text-3xl font-bold text-foreground mb-2">
               Vignesh Alaguvel
             </h3>
-            <p className="text-secondary font-medium mb-4">
-              Managing Partner & Financial Head
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              The pillar of support behind every success. Vignesh Alaguvel handles all
-              business operations, client relations, and ensures every
-              appointment runs smoothly. His dedication to customer satisfaction
-              and attention to detail makes the entire experience seamless for
-              our valued clients.
+            <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+              The backbone behind Jamuna's success — overseeing operations,
+              finances, and ensuring everything runs seamlessly behind the
+              scenes.
             </p>
           </div>
         </div>
 
-        {/* Partnership Quote */}
+        {/* Quote */}
         <div
           ref={quoteRef}
-          className={`mt-24 max-w-3xl mx-auto text-center transition-all duration-700 ${quoteVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
+          className={`mt-16 max-w-2xl mx-auto text-center transition-all duration-700 ${quoteVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
         >
-          <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic relative">
-            <span className="absolute -top-6 -left-4 text-6xl text-primary/20">
-              "
-            </span>
+          <div className="h-px w-16 bg-primary/30 mx-auto mb-8" />
+          <blockquote className="font-serif text-xl md:text-2xl text-foreground/80 italic">
             Together, we bring beauty and business excellence under one roof
-            <span className="absolute -bottom-8 -right-4 text-6xl text-primary/20">
-              "
-            </span>
           </blockquote>
-          <p className="mt-10 text-muted-foreground">
+          <p className="mt-4 text-muted-foreground text-sm">
             — A partnership built on love, trust, and shared dreams
           </p>
         </div>

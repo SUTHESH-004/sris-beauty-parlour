@@ -103,7 +103,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-32 bg-background relative overflow-hidden"
+      className="py-20 bg-background relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute top-20 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
