@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail, Phone, ArrowRight } from "lucide-react";
-import logo from "@/assets/sris-logo-only.png";
-import srisNameMark from "@/assets/sris-name-mark.png";
-import heroBeautyIllustration from "@/assets/hero-beauty-illustration.png";
+import { logo, srisNameMark, heroBeautyIllustration } from "@/assets/assets";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {

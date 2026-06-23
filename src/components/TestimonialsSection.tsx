@@ -1,6 +1,6 @@
 import { Star, Quote, HeartHandshake, Smile } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import testimonialFriendliness from "@/assets/testimonial-friendliness.png";
+import { testimonialFriendliness } from "@/assets/assets";
 
 // Static testimonials for display (approved reviews from database would be shown here too)
 const testimonials = [

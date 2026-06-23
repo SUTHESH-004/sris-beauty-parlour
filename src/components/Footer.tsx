@@ -1,4 +1,4 @@
-import { MessageCircle, Mail } from "lucide-react";
+import { MessageCircle, Mail, Camera } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Instagram"
             >
-              {/* <Instagram className="w-5 h-5" /> */}
+              <Camera className="w-5 h-5" />
             </a>
           </div>
 

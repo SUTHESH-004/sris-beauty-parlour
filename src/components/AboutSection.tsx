@@ -1,5 +1,4 @@
-import husbandHero from "@/assets/bca5f86a-3536-4750-ab47-19ccacd287fa.png";
-import jamunaHero from "@/assets/jamuna-portrait-new.png";
+import { vigneshPortrait, jamunaPortrait } from "@/assets/assets";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
@@ -34,7 +33,7 @@ const AboutSection = () => {
           <div className="text-center md:text-left group">
             <div className="w-48 h-48 mx-auto md:mx-0 rounded-full bg-primary/20 border-4 border-primary/30 mb-8 flex items-center justify-center overflow-hidden group-hover:scale-105 group-hover:border-primary/60 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-primary/20">
               <img
-                src={jamunaHero}
+                src={jamunaPortrait}
                 alt="Jamuna, lead beautician and founder"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -59,7 +58,7 @@ const AboutSection = () => {
           <div className="text-center md:text-left group">
             <div className="w-48 h-48 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-secondary/30 mb-8 group-hover:scale-105 group-hover:border-secondary/60 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-secondary/20">
               <img
-                src={husbandHero}
+                src={vigneshPortrait}
                 alt="Managing Partner"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />

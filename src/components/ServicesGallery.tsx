@@ -1,13 +1,14 @@
 import { Play, Sparkles } from "lucide-react";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
-// import portfolio7 from "@/assets/portfolio-7.jpg";
-import portfolio8 from "@/assets/portfolio-8.jpg";
-import bridalmakeupportfolio from "@/assets/bridalMakeup.jpeg";
-import mehendiartportfolio from "@/assets/mehandiportfolio.jpeg";
-import receptionMakeupPortfolio from "@/assets/receptionportfolio.jpeg";
+import {
+  portfolio2,
+  portfolio3,
+  portfolio5,
+  portfolio6,
+  portfolio8,
+  bridalMakeup as bridalmakeupportfolio,
+  mehndiPortfolio as mehendiartportfolio,
+  receptionPortfolio as receptionMakeupPortfolio,
+} from "@/assets/assets";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
