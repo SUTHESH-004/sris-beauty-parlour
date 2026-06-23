@@ -1,5 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Mail, Phone, ArrowRight, MapPin, Clock, Gift, Briefcase, X } from "lucide-react";
+import {
+  MessageCircle,
+  Mail,
+  Phone,
+  ArrowRight,
+  MapPin,
+  Clock,
+  Gift,
+  Briefcase,
+  X,
+} from "lucide-react";
 import { logo, srisNameMark, heroBeautyIllustration } from "@/assets/assets";
 import { useState, useEffect } from "react";
 
@@ -74,20 +84,21 @@ const HeroSection = () => {
               {/* Left: Name image + Headline */}
               <div className="flex-1 min-w-0">
                 {/* Name mark */}
-                <div className="relative h-[50px] w-[160px] sm:h-[65px] sm:w-[210px] md:h-[80px] md:w-[260px] overflow-hidden mb-3">
+                <div className="relative h-[70px] w-[240px] sm:h-[90px] sm:w-[320px] md:h-[110px] md:w-[400px] overflow-hidden mb-3">
                   <img
                     src={srisNameMark}
                     alt="Sri's Beauty Parlour"
-                    className="absolute h-[140%] w-[140%] -top-[22%] -left-[6%] object-cover drop-shadow-sm"
+                    className="absolute h-[160%] w-[160%] -top-[20%] -left-[15%] object-cover drop-shadow-sm"
                   />
                 </div>
                 {/* Headline */}
-                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-1">
+                <h1 className="pl-2 font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-[1.1] mb-1">
                   Your Beauty,
                 </h1>
-                <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1]">
+
+                <h1 className="pl-2 font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-[1.1]">
                   <span className="text-primary relative inline-block">
-                    Our Passion
+                    Our Passion !
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       viewBox="0 0 200 8"
@@ -112,12 +123,12 @@ const HeroSection = () => {
               </div>
 
               {/* Right: Logo */}
-              <div className="relative flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36">
+              <div className="relative flex-shrink-0 w-32 h-32 sm:w-36 sm:h-36 md:w-52 md:h-52">
                 <div className="absolute -inset-3 bg-primary/10 rounded-full blur-xl" />
                 <img
                   src={logo}
                   alt="Sri's Beauty Parlour Logo"
-                  className="relative h-full w-full object-contain drop-shadow-lg"
+                  className="relative h-full w-full -left-[20%] object-contain drop-shadow-lg"
                 />
               </div>
             </div>
@@ -197,16 +208,25 @@ const HeroSection = () => {
 
       {/* Scrolling marquee strip */}
       <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm overflow-hidden py-2.5 border-t border-primary/20">
-        <div className="flex whitespace-nowrap" style={{ animation: "marquee 25s linear infinite" }}>
+        <div
+          className="flex whitespace-nowrap"
+          style={{ animation: "marquee 25s linear infinite" }}
+        >
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-8 px-4 shrink-0">
               <a
                 href="#location"
-                onClick={(e) => { e.preventDefault(); document.getElementById("location")?.scrollIntoView({ behavior: "smooth" }); }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("location")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="flex items-center gap-2 text-foreground text-sm hover:text-primary transition-colors cursor-pointer"
               >
                 <MapPin className="w-3.5 h-3.5 text-primary" />
-                22/7, Kumaran Hardware Building, Near Muthoot Finance, Kinathukadavu, Tamil Nadu 642109
+                22/7, Kumaran Hardware Building, Near Muthoot Finance,
+                Kinathukadavu, Tamil Nadu 642109
               </a>
               <span className="text-foreground/20">|</span>
               <span className="flex items-center gap-2 text-foreground text-sm">
@@ -239,7 +259,10 @@ const HeroSection = () => {
 
       {/* Offers Popup */}
       {showOffers && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setShowOffers(false)}>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          onClick={() => setShowOffers(false)}
+        >
           <div className="absolute inset-0 bg-foreground/50 backdrop-blur-sm" />
           <div
             className="relative bg-card rounded-3xl shadow-2xl max-w-md w-full p-8 border border-primary/20"
@@ -260,7 +283,8 @@ const HeroSection = () => {
                 Festive Offers
               </h3>
               <p className="text-muted-foreground text-sm mb-6">
-                Celebrate this season with exclusive deals at Sri's Beauty Parlour
+                Celebrate this season with exclusive deals at Sri's Beauty
+                Parlour
               </p>
             </div>
 
@@ -268,27 +292,43 @@ const HeroSection = () => {
               <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
                 <span className="text-2xl font-bold text-primary">10%</span>
                 <div>
-                  <p className="font-medium text-foreground text-sm">Off on Bridal Packages</p>
-                  <p className="text-muted-foreground text-xs">Full bridal makeup + hair + mehndi</p>
+                  <p className="font-medium text-foreground text-sm">
+                    Off on Bridal Packages
+                  </p>
+                  <p className="text-muted-foreground text-xs">
+                    Full bridal makeup + hair + mehndi
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
                 <span className="text-2xl font-bold text-primary">15%</span>
                 <div>
-                  <p className="font-medium text-foreground text-sm">Off on Skincare Combos</p>
-                  <p className="text-muted-foreground text-xs">Facial + cleanup + hair spa</p>
+                  <p className="font-medium text-foreground text-sm">
+                    Off on Skincare Combos
+                  </p>
+                  <p className="text-muted-foreground text-xs">
+                    Facial + cleanup + hair spa
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
                 <span className="text-2xl font-bold text-primary">Free</span>
                 <div>
-                  <p className="font-medium text-foreground text-sm">Mehndi with Reception Package</p>
-                  <p className="text-muted-foreground text-xs">Book reception makeup & get mehndi free</p>
+                  <p className="font-medium text-foreground text-sm">
+                    Mehndi with Reception Package
+                  </p>
+                  <p className="text-muted-foreground text-xs">
+                    Book reception makeup & get mehndi free
+                  </p>
                 </div>
               </div>
             </div>
 
-            <Button size="lg" className="w-full gap-2 rounded-xl py-5 text-base" asChild>
+            <Button
+              size="lg"
+              className="w-full gap-2 rounded-xl py-5 text-base"
+              asChild
+            >
               <a
                 href="https://wa.me/919790674312?text=Hi%20I%20saw%20the%20festive%20offers%20and%20would%20like%20to%20book"
                 target="_blank"
