@@ -34,5 +34,5 @@ export { default as portfolio8 } from "./portfolio-8.jpg";
 export { default as testimonialFriendliness } from "./testimonial-friendliness.png";
 
 // Events
-export { default as babyShower } from "./baby-shower.jpeg";
+export { default as babyShower } from "./baby-shower.png";
 export { default as marriageImage } from "./marriage-image.png";
