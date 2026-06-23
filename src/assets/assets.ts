@@ -22,13 +22,6 @@ export { default as eyebrowPortfolio } from "./eyebrow-portfolio.png";
 export { default as facialPortfolio } from "./facial-portfolio.png";
 export { default as licetreatmentPortfolio } from "./licetreatment-portfolio.png";
 export { default as pedicurePortfolio } from "./pedicure-portfolio.png";
-export { default as portfolio2 } from "./portfolio-2.jpg";
-export { default as portfolio3 } from "./portfolio-3.jpg";
-export { default as portfolio4 } from "./portfolio-4.jpg";
-export { default as portfolio5 } from "./portfolio-5.jpg";
-export { default as portfolio6 } from "./portfolio-6.jpg";
-export { default as portfolio7 } from "./portfolio-7.jpg";
-export { default as portfolio8 } from "./portfolio-8.jpg";
 
 // Testimonials
 export { default as testimonialFriendliness } from "./testimonial-friendliness.png";
