@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Mail, Phone, ArrowRight } from "lucide-react";
+import { MessageCircle, Mail, Phone, ArrowRight, MapPin, Clock, Gift, Briefcase, X } from "lucide-react";
 import { logo, srisNameMark, heroBeautyIllustration } from "@/assets/assets";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [showOffers, setShowOffers] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -58,7 +59,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-28 md:py-32">
+      <div className="relative z-10 container mx-auto px-6 py-24 md:py-28">
         <div className="max-w-xl md:max-w-2xl">
           {/* Glassmorphism card */}
           <div className="relative backdrop-blur-md bg-background/40 border border-primary/10 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl">
@@ -194,12 +195,116 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-primary/50 flex items-start justify-center p-2 backdrop-blur-sm bg-background/10">
-          <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
+      {/* Scrolling marquee strip */}
+      <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm overflow-hidden py-2.5 border-t border-primary/20">
+        <div className="flex whitespace-nowrap" style={{ animation: "marquee 25s linear infinite" }}>
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex items-center gap-8 px-4 shrink-0">
+              <a
+                href="#location"
+                onClick={(e) => { e.preventDefault(); document.getElementById("location")?.scrollIntoView({ behavior: "smooth" }); }}
+                className="flex items-center gap-2 text-foreground text-sm hover:text-primary transition-colors cursor-pointer"
+              >
+                <MapPin className="w-3.5 h-3.5 text-primary" />
+                22/7, Kumaran Hardware Building, Near Muthoot Finance, Kinathukadavu, Tamil Nadu 642109
+              </a>
+              <span className="text-foreground/20">|</span>
+              <span className="flex items-center gap-2 text-foreground text-sm">
+                <Clock className="w-3.5 h-3.5 text-primary" />
+                Open Daily: 9 AM – 8 PM
+              </span>
+              <span className="text-foreground/20">|</span>
+              <span className="flex items-center gap-2 text-foreground text-sm">
+                <Phone className="w-3.5 h-3.5 text-primary" />
+                +91 97906 74312
+              </span>
+              <span className="text-foreground/20">|</span>
+              <span className="flex items-center gap-2 text-foreground text-sm">
+                <Briefcase className="w-3.5 h-3.5 text-primary" />
+                On-location service available
+              </span>
+              <span className="text-foreground/20">|</span>
+              <button
+                onClick={() => setShowOffers(true)}
+                className="flex items-center gap-2 text-primary text-sm font-semibold hover:text-primary/70 transition-colors"
+              >
+                <Gift className="w-3.5 h-3.5" />
+                Book now for 10% off — Festive Offers!
+              </button>
+              <span className="text-foreground/20 mr-8">|</span>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Offers Popup */}
+      {showOffers && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setShowOffers(false)}>
+          <div className="absolute inset-0 bg-foreground/50 backdrop-blur-sm" />
+          <div
+            className="relative bg-card rounded-3xl shadow-2xl max-w-md w-full p-8 border border-primary/20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowOffers(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="text-center">
+              <div className="w-14 h-14 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-4">
+                <Gift className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+                Festive Offers
+              </h3>
+              <p className="text-muted-foreground text-sm mb-6">
+                Celebrate this season with exclusive deals at Sri's Beauty Parlour
+              </p>
+            </div>
+
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                <span className="text-2xl font-bold text-primary">10%</span>
+                <div>
+                  <p className="font-medium text-foreground text-sm">Off on Bridal Packages</p>
+                  <p className="text-muted-foreground text-xs">Full bridal makeup + hair + mehndi</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                <span className="text-2xl font-bold text-primary">15%</span>
+                <div>
+                  <p className="font-medium text-foreground text-sm">Off on Skincare Combos</p>
+                  <p className="text-muted-foreground text-xs">Facial + cleanup + hair spa</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                <span className="text-2xl font-bold text-primary">Free</span>
+                <div>
+                  <p className="font-medium text-foreground text-sm">Mehndi with Reception Package</p>
+                  <p className="text-muted-foreground text-xs">Book reception makeup & get mehndi free</p>
+                </div>
+              </div>
+            </div>
+
+            <Button size="lg" className="w-full gap-2 rounded-xl py-5 text-base" asChild>
+              <a
+                href="https://wa.me/919790674312?text=Hi%20I%20saw%20the%20festive%20offers%20and%20would%20like%20to%20book"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Book Now on WhatsApp
+              </a>
+            </Button>
+
+            <p className="text-center text-muted-foreground text-xs mt-4">
+              Valid for a limited time. Terms apply.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* SVG animation keyframe */}
       <style>{`
