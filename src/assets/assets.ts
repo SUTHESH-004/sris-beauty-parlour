@@ -14,8 +14,14 @@ export { default as vigneshPortrait } from "./vignesh-portrait.png";
 export { default as bridalMakeup } from "./bridal-makeup.jpeg";
 export { default as bridalPortfolio } from "./bridal-portfolio.jpeg";
 export { default as bridalPortfolio2 } from "./bridal-portfolio-2.jpeg";
-export { default as receptionPortfolio } from "./reception-portfolio.jpeg";
+export { default as receptionPortfolio1 } from "./reception-portfolio1.jpeg";
+export { default as receptionPortfolio2 } from "./reception-portfolio2.jpeg";
 export { default as mehndiPortfolio } from "./mehndi-portfolio.jpeg";
+export { default as hairstylePortfolio } from "./hairstyle-portfolio.png";
+export { default as eyebrowPortfolio } from "./eyebrow-portfolio.png";
+export { default as facialPortfolio } from "./facial-portfolio.png";
+export { default as licetreatmentPortfolio } from "./licetreatment-portfolio.png";
+export { default as pedicurePortfolio } from "./pedicure-portfolio.png";
 export { default as portfolio2 } from "./portfolio-2.jpg";
 export { default as portfolio3 } from "./portfolio-3.jpg";
 export { default as portfolio4 } from "./portfolio-4.jpg";
@@ -29,4 +35,4 @@ export { default as testimonialFriendliness } from "./testimonial-friendliness.p
 
 // Events
 export { default as babyShower } from "./baby-shower.jpeg";
-export { default as event } from "./event.jpeg";
+export { default as marriageImage } from "./marriage-image.png";
