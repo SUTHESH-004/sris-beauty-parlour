@@ -91,6 +91,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "kenburns": "kenburns 8s ease-in-out infinite alternate",
         "marquee": "marquee 20s linear infinite",
+        "page-in": "page-fade-in 0.35s ease-out",
       },
       boxShadow: {
         "2xs": "var(--shadow-2xs)",
