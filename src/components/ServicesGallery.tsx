@@ -1,5 +1,4 @@
-import { Play, Sparkles, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Play, Sparkles } from "lucide-react";
 import {
   hairstylePortfolio,
   bridalMakeup as bridalmakeupportfolio,
@@ -16,14 +15,12 @@ const services = [
   {
     image: bridalmakeupportfolio,
     title: "Bridal Makeup",
-    slug: "bridal-makeup",
     alt: "Bridal makeup transformation at Sri's Beauty Parlour, Kinathukadavu",
     description: "Complete bridal transformation with premium products.",
   },
   {
     image: hairstylePortfolio,
     title: "Hair Styling",
-    slug: "hair-styling",
     alt: "Professional hair styling for weddings and events at Sri's Beauty Parlour",
     description: "From elegant updos to trendy cuts for every occasion.",
     objectPosition: "top",
@@ -31,42 +28,36 @@ const services = [
   {
     image: facialPortfolio,
     title: "Skincare & Facials",
-    slug: "skincare-facials",
     alt: "Skincare and facial treatment for glowing skin at Sri's Beauty Parlour",
     description: "Rejuvenating treatments for glowing, healthy skin.",
   },
   {
     image: mehendiartportfolio,
     title: "Mehndi Art",
-    slug: "mehndi-art",
     alt: "Intricate bridal mehndi henna art design at Sri's Beauty Parlour Kinathukadavu",
     description: "Intricate and beautiful henna designs for all celebrations.",
   },
   {
     image: pedicurePortfolio,
     title: "Manicure and Pedicure",
-    slug: "manicure-pedicure",
     alt: "Manicure and pedicure nail care services at Sri's Beauty Parlour",
     description: "Stunning nail designs and premium manicure services.",
   },
   {
     image: eyebrowPortfolio,
     title: "Eyebrow Shaping",
-    slug: "eyebrow-shaping",
     alt: "Eyebrow threading and shaping at Sri's Beauty Parlour Kinathukadavu",
     description: "Perfect eyebrow threading and shaping for defined looks.",
   },
   {
     image: receptionMakeupPortfolio,
     title: "Reception Makeup",
-    slug: "reception-makeup",
     alt: "Glamorous reception makeup for special occasions at Sri's Beauty Parlour",
     description: "Glamorous looks for special occasions and events.",
   },
   {
     image: licetreatmentPortfolio,
     title: "HairCare & Lice Treatment",
-    slug: "haircare-lice-treatment",
     alt: "Hair care and lice treatment services at Sri's Beauty Parlour Tamil Nadu",
     description: "Maintain long and healthy hair",
   },
@@ -125,18 +116,12 @@ const ServiceCard = ({
           </div>
         </div>
       </a>
-      <Link to={`/${service.slug}`} className="block">
-        <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-          {service.title}
-        </h3>
-        <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-          {service.description}
-        </p>
-        <span className="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
-          View details
-          <ArrowRight className="w-3.5 h-3.5" />
-        </span>
-      </Link>
+      <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+        {service.title}
+      </h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        {service.description}
+      </p>
     </div>
   );
 };

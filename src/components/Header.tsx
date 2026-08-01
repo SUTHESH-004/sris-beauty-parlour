@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
 import { logo } from "@/assets/assets";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -16,13 +13,9 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    setMobileMenuOpen(false);
-    if (location.pathname !== "/") {
-      navigate(`/#${id}`);
-      return;
-    }
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
+    setMobileMenuOpen(false);
   };
 
   const navLinks = [
@@ -37,7 +30,7 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card/95 backdrop-blur-md shadow-md" : "bg-card/80 backdrop-blur-md"} border-b border-border`}
     >
       <div className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <img
             src={logo}
             alt="Sri's Beauty Parlour Logo"
@@ -51,7 +44,7 @@ const Header = () => {
               Beauty Parlour
             </span>
           </div>
-        </Link>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
